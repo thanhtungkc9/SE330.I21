@@ -19,6 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ThemGhiChuActivity">
+
+        </activity>
+        <activity
+            android:name=".SuaGhiChuActivity">
+
+        </activity>
     </application>
 
 </manifest>

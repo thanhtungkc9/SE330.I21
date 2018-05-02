@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <TextView
+        android:id="@+id/textViewSuaTieuDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:text="Tiêu đề"
+
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edtSuaTieuDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:background="@android:color/transparent"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewSuaNoiDung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edtSuaNoiDung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:background="@android:color/transparent"
+        android:minLines="1" />
+
+    <TextView
+        android:id="@+id/textViewSuaNgayNhacNho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ngày nhắc nhở"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edtSuaNgayNhacNho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@android:color/transparent"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/btnLuu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lưu" />
+</LinearLayout>
