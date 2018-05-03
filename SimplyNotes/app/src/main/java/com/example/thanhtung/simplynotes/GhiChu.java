@@ -1,12 +1,17 @@
 package com.example.thanhtung.simplynotes;
 
+import android.support.annotation.NonNull;
+
 import java.io.Serializable;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * Created by ThanhTung on 02-May-18.
  */
 
-public class GhiChu implements Serializable {
+public class GhiChu implements Serializable,Comparable<GhiChu> {
     private int id;
     private String tieuDe;
     private String noiDung;
@@ -100,5 +105,20 @@ public class GhiChu implements Serializable {
         this.ngayTao = ngayTao;
         this.ngayNhacNho = ngayNhacNho;
         this.thoiGianChinhSuaCuoi = thoiGianChinhSuaCuoi;
+    }
+
+    @Override
+    public int compareTo(@NonNull GhiChu o) {
+        SimpleDateFormat format=new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            if (ngayNhacNho == o.ngayNhacNho)
+                return 0;
+            else if (format.parse(ngayNhacNho).before(format.parse(o.ngayNhacNho)))
+                return -1;
+            else return 1;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 }

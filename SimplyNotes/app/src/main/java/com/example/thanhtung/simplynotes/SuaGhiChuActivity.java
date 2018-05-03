@@ -1,6 +1,7 @@
 package com.example.thanhtung.simplynotes;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,7 +21,8 @@ public class SuaGhiChuActivity extends AppCompatActivity {
     EditText edtSuaTieuDe, edtSuaNoiDung, edtSuaNgayNhacNho;
     Button btnLuu;
     GhiChu ghiChu;
-
+    String mauNen="#ffffff";
+    String mauChu="#000000";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,14 @@ public class SuaGhiChuActivity extends AppCompatActivity {
         edtSuaTieuDe = (EditText) findViewById(R.id.edtSuaTieuDe);
         edtSuaNoiDung = (EditText) findViewById(R.id.edtSuaNoiDung);
         edtSuaNgayNhacNho = (EditText) findViewById(R.id.edtSuaNgayNhacNho);
+        edtSuaTieuDe.setTextColor(Color.parseColor(mauChu ));
+        edtSuaNoiDung.setTextColor(Color.parseColor(mauChu ));
+        edtSuaNgayNhacNho.setTextColor(Color.parseColor(mauChu ));
+
+        edtSuaTieuDe.setBackgroundColor(Color.parseColor(mauNen ));
+        edtSuaNoiDung.setBackgroundColor(Color.parseColor(mauNen ));
+        edtSuaNgayNhacNho.setBackgroundColor(Color.parseColor(mauNen ));
+
         btnLuu = (Button) findViewById(R.id.btnLuu);
         btnLuu.setOnClickListener(SaveEdit_Click);
     }
@@ -63,8 +73,8 @@ public class SuaGhiChuActivity extends AppCompatActivity {
             GhiChu ghiChuu = new GhiChu(b,
                     edtSuaTieuDe.getText().toString(),
                     edtSuaNoiDung.getText().toString(),
-                    "#000000",
                     "#ffffff",
+                    "#000000",
                     ghiChu.getTheLoai(),
                     ghiChu.getNgayTao(),
                     edtSuaNgayNhacNho.getText().toString(),

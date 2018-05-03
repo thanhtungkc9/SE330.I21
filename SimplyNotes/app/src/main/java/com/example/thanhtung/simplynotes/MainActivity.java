@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by ThanhTung on 02-May-18.
@@ -163,7 +164,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_sort) {
+
+            Collections.sort(mangGhiChu);
+            adapter.notifyDataSetChanged();
             return true;
         }
 
