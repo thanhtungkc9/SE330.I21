@@ -25,7 +25,7 @@ public class ThemGhiChuActivity extends AppCompatActivity {
     TextView edtTieuDe, edtNoiDung, edtNgayNhacNho;
     Button btnThem;
      String mauChu="#000000";
-     String mauNen="#ffffff";
+     String mauNen="#fafafa";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,25 +69,25 @@ public class ThemGhiChuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final ColorPicker colorPicker = new ColorPicker(ThemGhiChuActivity.this);
                 final ArrayList<String> colors=new ArrayList<>();
-                colors.add("#258174");
-                colors.add("#3C8D2F");
-                colors.add("#000000");
+                colors.add("#F0F8FF");
+                colors.add("#F5D1CE");
+                colors.add("#A8FFD4");
+                colors.add("#FFF8F0");
+                colors.add("#E6E6E6");
+
                 colorPicker.setColors(colors).setColumns(5)
                         .setRoundColorButton(true).setOnChooseColorListener(new ColorPicker.OnChooseColorListener() {
                     @Override
                     public void onChooseColor(int position, int color) {
-                        mauChu=colors.get(position);
-                        edtNgayNhacNho.setTextColor(Color.parseColor(mauChu));
-                        edtNoiDung.setTextColor(Color.parseColor(mauChu));
-                        edtTieuDe.setTextColor(Color.parseColor(mauChu));
+                        mauNen=colors.get(position);
                     }
 
                     @Override
                     public void onCancel() {
-                        Toast.makeText(getBaseContext(),"DDD",Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getBaseContext(),"Canceled",Toast.LENGTH_SHORT).show();
 
                     }
-                }).setDefaultColorButton(Color.parseColor(mauChu)).show();
+                }).setDefaultColorButton(Color.parseColor(mauNen)).show();
             }
         });
     }

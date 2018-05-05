@@ -2,14 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_sort"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        android:icon="@drawable/ic_menu_camera"
+        android:id="@+id/app_bar_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_search_white"
+        android:orderInCategory="102"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView"
         app:showAsAction="always" />
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_view"
+        android:orderInCategory="103"
+        android:title="View"
+        app:showAsAction="always" />
 </menu>

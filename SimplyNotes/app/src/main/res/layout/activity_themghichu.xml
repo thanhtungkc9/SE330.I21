@@ -1,64 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10">
 
     <TextView
         android:id="@+id/textViewTieuDe"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_condensed_regular"
         android:minLines="1"
         android:text="Tiêu đề"
-        android:textSize="18sp" />
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtTieuDe"
-        android:layout_width="match_parent"
+        style="@style/Title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:textStyle="bold" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTieuDe" />
 
     <TextView
         android:id="@+id/textViewNoiDung"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_condensed_regular"
         android:text="Nội dung"
-        android:textSize="18sp" />
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTieuDe" />
 
     <EditText
         android:id="@+id/edtNoiDung"
-        android:layout_width="match_parent"
+        style="@style/Content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="textMultiLine"
-        android:minLines="1" />
+        android:minLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNoiDung" />
 
     <TextView
         android:id="@+id/textViewNgayNhacNho"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_condensed_regular"
         android:text="Ngày nhắc nhở"
-        android:textSize="18sp" />
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNoiDung" />
 
     <EditText
         android:id="@+id/edtNgayNhacNho"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
-        android:inputType="date" />
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:inputType="date"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNgayNhacNho" />
 
     <Button
         android:id="@+id/btnThem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thêm" />
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_dark"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:text="Thêm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNgayNhacNho" />
 
     <Button
         android:id="@+id/btnTest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="Chọn màu nền"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/btnThem"
+        app:layout_constraintTop_toBottomOf="@+id/edtNgayNhacNho" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
