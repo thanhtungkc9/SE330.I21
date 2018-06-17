@@ -70,6 +70,38 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewSuaNoiDung" />
 
     <TextView
+        android:id="@+id/textViewSuaGioNhacNho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="Giờ nhắc nhở"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSuaNoiDung" />
+
+    <EditText
+        android:id="@+id/edtSuaGioNhacNho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:inputType="time"
+        android:focusable="false"
+        android:clickable="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSuaGioNhacNho" />
+    <TextView
         android:id="@+id/textViewSuaNgayNhacNho"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -80,22 +112,24 @@
         android:text="Ngày nhắc nhở"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSuaNoiDung" />
-
+        app:layout_constraintTop_toBottomOf="@+id/edtSuaGioNhacNho" />
     <EditText
         android:id="@+id/edtSuaNgayNhacNho"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:background="@android:color/transparent"
         android:ems="10"
         android:fontFamily="@font/roboto_condensed_regular"
         android:inputType="date"
+        android:focusable="false"
+        android:clickable="true"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSuaNgayNhacNho" />
 
@@ -111,5 +145,31 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSuaNgayNhacNho" />
+    <Button
+        android:id="@+id/btnSuaMauNen"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="Chọn màu nền"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/btnLuu"
+        app:layout_constraintTop_toBottomOf="@+id/edtSuaNgayNhacNho" />
+    <Switch
+        android:id="@+id/switchSuaBaoThuc"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="Báo thức"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSuaMauNen"
         app:layout_constraintTop_toBottomOf="@+id/edtSuaNgayNhacNho" />
 </android.support.constraint.ConstraintLayout>

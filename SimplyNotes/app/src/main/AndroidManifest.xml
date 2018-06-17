@@ -28,6 +28,16 @@
             android:name=".SuaGhiChuActivity">
 
         </activity>
+        <activity
+            android:name=".BaoThucDialog">
+
+        </activity>
+
+        <receiver android:name=".AlarmReceiver"/>
+        <service
+            android:name=".Music"
+            android:enabled="true"/>
+
 
         <meta-data
             android:name="preloaded_fonts"

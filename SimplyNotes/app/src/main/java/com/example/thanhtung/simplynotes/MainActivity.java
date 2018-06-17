@@ -1,5 +1,6 @@
 package com.example.thanhtung.simplynotes;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -19,13 +20,14 @@ import android.widget.Toast;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by ThanhTung on 02-May-18.
  */
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,AdapterView.OnItemClickListener,AdapterView.OnItemLongClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener,AdapterView.OnItemClickListener {
 
     ListView lvGhiChu;
     ArrayList<GhiChu> mangGhiChu;
@@ -71,8 +73,7 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(MainActivity.this,e.toString(),Toast.LENGTH_SHORT).show();
         }
         lvGhiChu.setOnItemClickListener(this);
-        lvGhiChu.setOnItemLongClickListener(this);
-
+       // lvGhiChu.setOnItemLongClickListener(this);
     }
 
 
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra("EDIT", (Serializable) adapter.getListData().get(position));
         startActivityForResult(intent, 20);
     }
-    @Override
+   /* @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(MainActivity.this, SuaGhiChuActivity.class);
         database.deleteNote(adapter.getListData().get(position).getId());
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity
         Toast.makeText(MainActivity.this,"Đã xóa ghi chú",Toast.LENGTH_SHORT).show();
         adapter.notifyDataSetChanged();
         return false;
-    }
+    }*/
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -131,15 +132,18 @@ public class MainActivity extends AppCompatActivity
 
                 }
             case 20:
+                Toast.makeText(MainActivity.this,"20",Toast.LENGTH_LONG).show();
                 if (data != null) {
                     // Lấy ra dữ liệu được truyền về từ EditActivity
                     GhiChu select = (GhiChu) data.getSerializableExtra("EDIT");
                     if (resultCode == 200) {
+
                         for (GhiChu item : adapter.getListData()) {
                             if (item.getId() == select.getId()) {
                                 item.setTieuDe(select.getTieuDe());
                                 item.setNoiDung(select.getNoiDung());
                                 item.setNgayNhacNho(select.getNgayNhacNho());
+                                item.setGioNhacNho(select.getGioNhacNho());
                                 item.setMauChu(select.getMauChu());
                                 item.setMauNen(select.getMauNen());
                                 item.setNgayTao(select.getNgayTao());
@@ -167,6 +171,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_sort) {
 
             Collections.sort(mangGhiChu);
+            adapter.notifyDataSetChanged();
+            return true;
+        }
+        else if (id==R.id.action_sort_decrease)
+        {
+            Collections.sort(mangGhiChu);
+            Collections.reverse(mangGhiChu);
             adapter.notifyDataSetChanged();
             return true;
         }

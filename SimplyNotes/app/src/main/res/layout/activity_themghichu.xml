@@ -70,6 +70,38 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewNoiDung" />
 
     <TextView
+        android:id="@+id/textViewGioNhacNho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="Giờ nhắc nhở"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNoiDung" />
+
+    <EditText
+        android:id="@+id/edtGioNhacNho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:inputType="time"
+        android:focusable="false"
+        android:clickable="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGioNhacNho" />
+    <TextView
         android:id="@+id/textViewNgayNhacNho"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -82,8 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNoiDung" />
-
+        app:layout_constraintTop_toBottomOf="@+id/edtGioNhacNho" />
     <EditText
         android:id="@+id/edtNgayNhacNho"
         android:layout_width="0dp"
@@ -94,6 +125,8 @@
         android:ems="10"
         android:fontFamily="@font/roboto_condensed_regular"
         android:inputType="date"
+        android:focusable="false"
+        android:clickable="true"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -118,7 +151,7 @@
 
     <Button
         android:id="@+id/btnTest"
-        android:layout_width="140dp"
+        android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="30dp"
@@ -129,5 +162,21 @@
         android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toStartOf="@+id/btnThem"
         app:layout_constraintTop_toBottomOf="@+id/edtNgayNhacNho" />
+    <Switch
+        android:id="@+id/switchBaoThuc"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_light"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:text="Báo thức"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTest"
+        app:layout_constraintTop_toBottomOf="@+id/edtNgayNhacNho" />
+
+
+
 
 </android.support.constraint.ConstraintLayout>

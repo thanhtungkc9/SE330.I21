@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -45,7 +46,7 @@ public class GhiChuAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         LayoutInflater inflater= (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(this.layout,null);
@@ -59,8 +60,18 @@ public class GhiChuAdapter extends BaseAdapter {
         txtNoiDung.setText(ghiChuList.get(position).getNoiDung());
 
         TextView txtNgayNhacNho= (TextView) convertView.findViewById(R.id.txtNgayNhacNho);
-        txtNgayNhacNho.setText(ghiChuList.get(position).getNgayNhacNho());
+        txtNgayNhacNho.setText(ghiChuList.get(position).getNgayNhacNho()+"  "+ghiChuList.get(position).getGioNhacNho());
 
+        ImageView btnDelete=(ImageView) convertView.findViewById(R.id.btnDelete);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDatabaseHandler database=new SQLiteDatabaseHandler(context);
+                database.deleteNote(ghiChuList.get(position).getId());
+                ghiChuList.remove(ghiChuList.get(position));
+                notifyDataSetChanged();
+            }
+        });
         txtTieuDe.setTextColor(Color.parseColor(ghiChuList.get(position).getMauChu()));
         txtNoiDung.setTextColor(Color.parseColor(ghiChuList.get(position).getMauChu()));
         txtNgayTao.setTextColor(Color.parseColor(ghiChuList.get(position).getMauChu()));

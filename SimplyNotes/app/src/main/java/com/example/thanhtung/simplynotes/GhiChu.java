@@ -20,6 +20,7 @@ public class GhiChu implements Serializable,Comparable<GhiChu> {
     private String theLoai;
     private String ngayTao;
     private String ngayNhacNho;
+    private String gioNhacNho;
     private String thoiGianChinhSuaCuoi;
 
     public int getId() {
@@ -78,6 +79,14 @@ public class GhiChu implements Serializable,Comparable<GhiChu> {
         this.ngayTao = ngayTao;
     }
 
+    public String getGioNhacNho() {
+        return gioNhacNho;
+    }
+
+    public void setGioNhacNho(String gioNhacNho) {
+        this.gioNhacNho = gioNhacNho;
+    }
+
     public String getNgayNhacNho() {
         return ngayNhacNho;
     }
@@ -85,6 +94,7 @@ public class GhiChu implements Serializable,Comparable<GhiChu> {
     public void setNgayNhacNho(String ngayNhacNho) {
         this.ngayNhacNho = ngayNhacNho;
     }
+
 
     public String getThoiGianChinhSuaCuoi() {
         return thoiGianChinhSuaCuoi;
@@ -94,7 +104,7 @@ public class GhiChu implements Serializable,Comparable<GhiChu> {
         this.thoiGianChinhSuaCuoi = thoiGianChinhSuaCuoi;
     }
 
-    public GhiChu(int id, String tieuDe, String noiDung, String mauNen, String mauChu, String theLoai, String ngayTao, String ngayNhacNho, String thoiGianChinhSuaCuoi) {
+    public GhiChu(int id, String tieuDe, String noiDung, String mauNen, String mauChu, String theLoai, String ngayTao, String ngayNhacNho,String gioNhacNho, String thoiGianChinhSuaCuoi) {
         this.id = id;
         this.tieuDe = tieuDe;
         this.noiDung = noiDung;
@@ -104,6 +114,7 @@ public class GhiChu implements Serializable,Comparable<GhiChu> {
         this.theLoai = theLoai;
         this.ngayTao = ngayTao;
         this.ngayNhacNho = ngayNhacNho;
+        this.gioNhacNho = gioNhacNho;
         this.thoiGianChinhSuaCuoi = thoiGianChinhSuaCuoi;
     }
 
