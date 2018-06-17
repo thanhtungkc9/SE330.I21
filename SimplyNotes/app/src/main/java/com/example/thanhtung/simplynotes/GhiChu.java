@@ -123,8 +123,11 @@ public class GhiChu implements Serializable,Comparable<GhiChu> {
         SimpleDateFormat format=new SimpleDateFormat("dd/MM/yyyy");
         try {
             if (ngayNhacNho == o.ngayNhacNho)
-                return 0;
-            else if (format.parse(ngayNhacNho).before(format.parse(o.ngayNhacNho)))
+            {
+                if (id < o.id)
+                    return-1;
+            }
+            else if (format.parse(ngayTao).before(format.parse(o.ngayTao)))
                 return -1;
             else return 1;
         } catch (ParseException e) {

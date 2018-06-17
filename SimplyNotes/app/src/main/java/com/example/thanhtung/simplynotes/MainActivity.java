@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity
 
                 }
             case 20:
-                Toast.makeText(MainActivity.this,"20",Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this,"20",Toast.LENGTH_LONG).show();
                 if (data != null) {
                     // Lấy ra dữ liệu được truyền về từ EditActivity
                     GhiChu select = (GhiChu) data.getSerializableExtra("EDIT");
@@ -189,15 +189,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
-        if (id == R.id.nav_share) {
-            // Handle the camera action
-        } else if (id == R.id.nav_send) {
-
-        } else if (id == R.id.nav_settings) {
-
-        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
