@@ -5,14 +5,14 @@
         android:id="@+id/action_sort_decrease"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/ic_search_white"
-        android:orderInCategory="102"
+        android:icon="@drawable/ic_sort_descending"
+        android:orderInCategory="103"
         android:title="Sort_Decrese"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_sort"
-        android:icon="@drawable/ic_view"
-        android:orderInCategory="103"
+        android:icon="@drawable/ic_sort_ascending"
+        android:orderInCategory="104"
         android:title="View"
         app:showAsAction="always" />
 </menu>
