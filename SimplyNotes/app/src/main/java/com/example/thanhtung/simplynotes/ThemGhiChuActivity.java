@@ -78,7 +78,7 @@ public class ThemGhiChuActivity extends AppCompatActivity {
 
                     intentBaoThuc.putExtra("extra", "on");
                    // pendingIntent = PendingIntent.getBroadcast(ThemGhiChuActivity.this, getIntent().getIntExtra("LENGTH", -1) + 1, intentBaoThuc, 0);
-                    // alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                     //alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                 }
                 else
                 {
@@ -122,6 +122,7 @@ public class ThemGhiChuActivity extends AppCompatActivity {
                         intentBaoThuc.putExtra("TieuDe", ghiChu.getTieuDe());
                         intentBaoThuc.putExtra("NoiDung", ghiChu.getNoiDung());
                         intentBaoThuc.putExtra("ID", ghiChu.getId());
+
                         pendingIntent = PendingIntent.getBroadcast(ThemGhiChuActivity.this, getIntent().getIntExtra("LENGTH", -1) + 1, intentBaoThuc, 0);
                         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                         intent.putExtra("ADD", (Serializable) ghiChu);

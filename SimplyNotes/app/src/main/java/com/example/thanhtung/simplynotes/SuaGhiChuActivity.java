@@ -128,7 +128,7 @@ public class SuaGhiChuActivity extends AppCompatActivity {
 
                     intentBaoThuc.putExtra("extra", "on");
                     //pendingIntent = PendingIntent.getBroadcast(SuaGhiChuActivity.this, ghiChu.getId(), intentBaoThuc, 0);
-                    // alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                     //alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                 }
                 else
                 {
@@ -156,7 +156,7 @@ public class SuaGhiChuActivity extends AppCompatActivity {
                         "personal",
                         ft.format(ngayHienTai).toString(),
                         edtSuaNgayNhacNho.getText().toString(),
-                        ConvertTime(ihour, iminute),
+                        ihour+":"+iminute,
                         ft.format(ngayHienTai).toString());
 
                 if (switchSuaBaoThuc.isChecked()) {
@@ -169,9 +169,13 @@ public class SuaGhiChuActivity extends AppCompatActivity {
                         intentBaoThuc.putExtra("TieuDe", ghiChuu.getTieuDe());
                         intentBaoThuc.putExtra("NoiDung", ghiChuu.getNoiDung());
                         intentBaoThuc.putExtra("ID", ghiChuu.getId());
+
+                        intentBaoThuc.putExtra("extra", "on");
+
                         pendingIntent = PendingIntent.getBroadcast(SuaGhiChuActivity.this, ghiChu.getId(), intentBaoThuc, 0);
+
                         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-                        ghiChuu.setGioNhacNho(edtSuaGioNhacNho.getText().toString());
+                        ghiChuu.setGioNhacNho(ihour+":"+iminute);
                         ghiChuu.setNgayNhacNho(edtSuaNgayNhacNho.getText().toString());
                         intent.putExtra("EDIT", (Serializable) ghiChuu);
                         Log.d("Intent",ghiChuu.getNoiDung());

@@ -166,21 +166,22 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button_dark, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        try {
+            //noinspection SimplifiableIfStatement
+            if (id == R.id.action_sort) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_sort) {
-
-            Collections.sort(mangGhiChu);
-            adapter.notifyDataSetChanged();
-            return true;
+                Collections.sort(mangGhiChu);
+                adapter.notifyDataSetChanged();
+                return true;
+            } else if (id == R.id.action_sort_decrease) {
+                Collections.sort(mangGhiChu);
+                Collections.reverse(mangGhiChu);
+                adapter.notifyDataSetChanged();
+                return true;
+            }
         }
-        else if (id==R.id.action_sort_decrease)
-        {
-            Collections.sort(mangGhiChu);
-            Collections.reverse(mangGhiChu);
-            adapter.notifyDataSetChanged();
-            return true;
-        }
+        catch (Exception e)
+        {}
 
         return super.onOptionsItemSelected(item);
     }
