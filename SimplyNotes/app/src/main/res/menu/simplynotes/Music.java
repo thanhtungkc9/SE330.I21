@@ -30,6 +30,7 @@ public class Music extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.e("Tôi trong Music", "Xin chào");
+        //Nhận id từ AlarmReceiver
         BaoThucid=startId;
         String key = intent.getExtras().getString("extra");
         Log.e("Music nhận key", key + "");

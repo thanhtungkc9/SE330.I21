@@ -13,6 +13,7 @@ public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.e("Tôi trong Receiver", "Xin chào");
+        //Nhận id từ BaoThuc
         String chuoi_string = intent.getExtras().getString("extra");
         Log.e("Key", chuoi_string + "");
         String tieuDe,noiDung;

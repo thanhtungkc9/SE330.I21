@@ -3,7 +3,6 @@ package com.example.thanhtung.simplynotes;
 import android.support.annotation.NonNull;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 

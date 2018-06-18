@@ -14,7 +14,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -48,6 +47,7 @@ public class BaoThuc extends AppCompatActivity {
     }
 
     private void EventEdittext() {
+        //Chọn ngày đặt báo thức
         etxtDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +63,7 @@ public class BaoThuc extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
-
+        //Chọn giờ đặt báo thức
         etxtTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +81,7 @@ public class BaoThuc extends AppCompatActivity {
     }
 
     private void EventButton() {
+        //Đồng ý đặt báo thức
         btnHengio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

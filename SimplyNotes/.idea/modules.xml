@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SimplyNotes.iml" filepath="$PROJECT_DIR$/SimplyNotes.iml" />
-      <module fileurl="file://D:\UIT\HK6\Java\NopDoAn\SE330.I21\SimplyNotes\SimplyNotes.iml" filepath="D:\UIT\HK6\Java\NopDoAn\SE330.I21\SimplyNotes\SimplyNotes.iml" />
+      <module fileurl="file://D:/UIT/HK6/Java/NopDoAn/SE330.I21/SimplyNotes/SimplyNotes.iml" filepath="D:/UIT/HK6/Java/NopDoAn/SE330.I21/SimplyNotes/SimplyNotes.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\UIT\HK6\Java\NopDoAn\SE330.I21\SimplyNotes\app\app.iml" filepath="D:\UIT\HK6\Java\NopDoAn\SE330.I21\SimplyNotes\app\app.iml" />
+      <module fileurl="file://D:/UIT/HK6/Java/NopDoAn/SE330.I21/SimplyNotes/app/app.iml" filepath="D:/UIT/HK6/Java/NopDoAn/SE330.I21/SimplyNotes/app/app.iml" />
     </modules>
   </component>
 </project>

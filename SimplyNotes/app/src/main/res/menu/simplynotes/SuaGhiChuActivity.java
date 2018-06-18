@@ -145,7 +145,7 @@ public class SuaGhiChuActivity extends AppCompatActivity {
         btnLuu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //Lưu báo thức
                 Date ngayHienTai = new Date();
                 SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy");
                 GhiChu ghiChuu = new GhiChu(ghiChu.getId(),
